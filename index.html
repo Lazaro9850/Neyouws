@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>- Neyouws -</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ESTILO GERAL */
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      color: #3d2918;
+      line-height: 1.7;
+
+      /* Fundo com textura de jornal amassado */
+      background-image: url('background_geral.jpg');
+      background-repeat: repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    /* Camada sutil de cor bege sobre o fundo (para leitura mais agradável) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(242, 220, 196, 0.85);
+      z-index: -1;
+    }
+
+    /* CABEÇALHO */
+    header {
+      background-color: rgba(232, 201, 169, 0.95);
+      border-bottom: 5px double #3d2918;
+      text-align: center;
+      padding: 20px 10px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 2px;
+      background-color: #3d2918;
+      margin: 10px auto 0;
+      opacity: 0.6;
+    }
+
+    header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4rem;
+      margin: 0;
+      letter-spacing: 6px;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-top: 5px;
+    }
+
+    /* IMAGEM PRINCIPAL */
+    .banner img {
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+      display: block;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    /* CONTAINER GERAL */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    /* SEÇÃO DE NOTÍCIAS */
+    .noticias-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    /* COLUNA PRINCIPAL */
+    .coluna-principal {
+      background-color: rgba(247, 232, 207, 0.93);
+      border: 1px solid #d3b48c;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .coluna-principal h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      border-bottom: 2px solid #3d2918;
+      padding-bottom: 5px;
+    }
+
+    .coluna-principal p {
+      text-align: justify;
+    }
+
+    /* COLUNA LATERAL */
+    .coluna-lateral {
+      background-color: rgba(244, 226, 197, 0.93);
+      border: 1px solid #d3b48c;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .coluna-lateral h3 {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #3d2918;
+      padding-bottom: 5px;
+      margin-top: 0;
+    }
+
+    .coluna-lateral p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    /* LINHAS DIVISORAS COMO EM JORNAIS */
+    .linha-divisoria {
+      border-top: 2px dotted #3d2918;
+      margin: 40px 0;
+      opacity: 0.6;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background-color: rgba(232, 201, 169, 0.95);
+      border-top: 5px double #3d2918;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>N E Y O U W S</h1>
+    <p>A notícia feita pra você</p>
+  </header>
+
+  <div class="banner">
+    <img src="background.jpg" alt="Imagem principal do site">
+  </div>
+
+  <main>
+    <div class="noticias-container">
+      <!-- Coluna Principal -->
+      <div class="coluna-principal">
+        <h2>Últimas Notícias</h2>
+        <p>
+          Bem-vindo ao Neyouws, o jornal que traz a notícia com a sua cara. Aqui, cada manchete tem um toque humano e cada história carrega a voz de quem faz o agora acontecer.
+        </p>
+
+        <div class="linha-divisoria"></div>
+
+        <h2>Nova tecnologia promete revolucionar a forma de consumir conteúdo</h2>
+        <p>
+          Pesquisadores apresentaram uma plataforma interativa que une personalização de notícias e inteligência artificial. A ferramenta promete entregar informação sob medida para cada leitor.
+        </p>
+      </div>
+
+      <!-- Coluna Lateral -->
+      <aside class="coluna-lateral">
+        <h3>Destaques</h3>
+        <p>• Economia volta a crescer em 2025, aponta relatório.</p>
+        <p>• Estudo mostra aumento no consumo de informação digital.</p>
+        <p>• Entrevista: os bastidores da nova geração de jornalistas.</p>
+
+        <div class="linha-divisoria"></div>
+
+        <h3>Editorial</h3>
+        <p>
+          O Neyouws nasce com um propósito simples: informar com verdade, empatia e estilo. Aqui, o leitor não é apenas espectador — é parte da notícia.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Neyouws — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
