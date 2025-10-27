@@ -16,7 +16,6 @@
       color: #3d2918;
       line-height: 1.7;
 
-      /* Fundo com textura de jornal amassado */
       background-image: url('background_geral.jpg');
       background-repeat: repeat;
       background-size: cover;
@@ -24,7 +23,6 @@
       background-position: center;
     }
 
-    /* Camada sutil de cor bege sobre o fundo (para leitura mais agradável) */
     body::before {
       content: "";
       position: fixed;
@@ -42,7 +40,6 @@
       border-bottom: 5px double #3d2918;
       text-align: center;
       padding: 20px 10px;
-      position: relative;
     }
 
     header::after {
@@ -86,7 +83,6 @@
       padding: 0 30px;
     }
 
-    /* SEÇÃO DE NOTÍCIAS */
     .noticias-container {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -113,6 +109,21 @@
       text-align: justify;
     }
 
+    /* LINKS DE NOTÍCIA */
+    a {
+      color: #3d2918;
+      text-decoration: none;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    a:hover {
+      color: #1d1209;
+      text-shadow: 0 0 3px rgba(61, 41, 24, 0.5);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
     /* COLUNA LATERAL */
     .coluna-lateral {
       background-color: rgba(244, 226, 197, 0.93);
@@ -134,7 +145,6 @@
       margin-bottom: 15px;
     }
 
-    /* LINHAS DIVISORAS COMO EM JORNAIS */
     .linha-divisoria {
       border-top: 2px dotted #3d2918;
       margin: 40px 0;
@@ -168,25 +178,27 @@
     <div class="noticias-container">
       <!-- Coluna Principal -->
       <div class="coluna-principal">
-        <h2>Últimas Notícias</h2>
+        <h2><a href="noticia1.html">Nova tecnologia promete revolucionar a forma de consumir conteúdo</a></h2>
         <p>
-          Bem-vindo ao Neyouws, o jornal que traz a notícia com a sua cara. Aqui, cada manchete tem um toque humano e cada história carrega a voz de quem faz o agora acontecer.
+          Pesquisadores apresentaram uma plataforma interativa que une personalização de notícias e inteligência artificial. 
+          <a href="noticia1.html">Leia mais...</a>
         </p>
 
         <div class="linha-divisoria"></div>
 
-        <h2>Nova tecnologia promete revolucionar a forma de consumir conteúdo</h2>
+        <h2><a href="noticia2.html">Governo anuncia plano para modernizar escolas públicas</a></h2>
         <p>
-          Pesquisadores apresentaram uma plataforma interativa que une personalização de notícias e inteligência artificial. A ferramenta promete entregar informação sob medida para cada leitor.
+          O novo programa busca integrar ferramentas digitais ao ensino, ampliando o acesso à tecnologia e reduzindo desigualdades educacionais.
+          <a href="noticia2.html">Leia mais...</a>
         </p>
       </div>
 
       <!-- Coluna Lateral -->
       <aside class="coluna-lateral">
         <h3>Destaques</h3>
-        <p>• Economia volta a crescer em 2025, aponta relatório.</p>
-        <p>• Estudo mostra aumento no consumo de informação digital.</p>
-        <p>• Entrevista: os bastidores da nova geração de jornalistas.</p>
+        <p><a href="noticia3.html">• Economia volta a crescer em 2025, aponta relatório.</a></p>
+        <p><a href="noticia4.html">• Estudo mostra aumento no consumo de informação digital.</a></p>
+        <p><a href="noticia5.html">• Entrevista: os bastidores da nova geração de jornalistas.</a></p>
 
         <div class="linha-divisoria"></div>
 
