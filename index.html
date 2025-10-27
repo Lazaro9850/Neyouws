@@ -160,6 +160,67 @@
       font-size: 0.9rem;
       font-style: italic;
     }
+
+    /* ...seu CSS existente... */
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+        letter-spacing: 4px;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 0 20px;
+      }
+
+      .noticias-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .coluna-principal, .coluna-lateral {
+        padding: 20px;
+      }
+
+      .banner img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      .coluna-principal h2 {
+        font-size: 1.4rem;
+      }
+
+      .coluna-lateral h3 {
+        font-size: 1rem;
+      }
+
+      .coluna-principal, .coluna-lateral {
+        padding: 15px;
+      }
+
+      footer {
+        font-size: 0.8rem;
+        padding: 15px 10px;
+      }
+  }
+
   </style>
 </head>
 
